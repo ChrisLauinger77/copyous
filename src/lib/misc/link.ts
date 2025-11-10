@@ -173,7 +173,10 @@ export async function tryGetLinkImage(ext: Extension, url: string): Promise<Gio.
 		const session = new Soup.Session({ user_agent: UserAgent, idle_timeout: 5 });
 		const message = Soup.Message.new_from_uri('GET', uri);
 		// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept
-		message.request_headers.append('Accept', 'image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5');
+		message.request_headers.append(
+			'Accept',
+			'image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5',
+		);
 
 		// Send request
 		const response = await session.send_and_read_async(message, GLib.PRIORITY_DEFAULT, null);

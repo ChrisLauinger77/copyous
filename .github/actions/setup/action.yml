@@ -6,12 +6,8 @@ inputs:
     default: 'false'
 
 runs:
-  using: 'composite'
+  using: composite
   steps:
-    - uses: actions/checkout@v5
-      with:
-        submodules: true
-
     - name: Install Pnpm
       uses: pnpm/action-setup@v4
       with:
@@ -28,14 +24,14 @@ runs:
       run: pnpm install --ignore-scripts
 
     - name: Install Gnome Extensions Tool Dependencies
-      if: inputs.build-gnome-extensions-tool == 'true'
+      if: inputs.install-gnome-extensions-tool == 'true'
       shell: bash
       run: |
         sudo apt update
         sudo apt install -y meson gettext python3-docutils libglib2.0-dev libgnome-autoar-0-dev libjson-glib-dev libsoup-3.0-dev
 
     - name: Install Gnome Extensions Tool
-      if: inputs.build-gnome-extensions-tool == 'true'
+      if: inputs.install-gnome-extensions-tool == 'true'
       shell: bash
       working-directory: ./submodules/gnome-shell/subprojects/extensions-tool
       run: |

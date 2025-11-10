@@ -90,7 +90,11 @@ class AppSelectionPopover extends Gtk.Popover {
 		model.splice(0, 0, apps);
 
 		const filter = new Gtk.StringFilter({
-			expression: Gtk.ClosureExpression.new(GObject.TYPE_STRING, (info: Gio.AppInfo) => info.get_display_name(), null),
+			expression: Gtk.ClosureExpression.new(
+				GObject.TYPE_STRING,
+				(info: Gio.AppInfo) => info.get_display_name(),
+				null,
+			),
 			ignore_case: true,
 			match_mode: Gtk.StringFilterMatchMode.SUBSTRING,
 		});
@@ -210,7 +214,13 @@ class WMClassExclusionDialog extends Adw.AlertDialog {
 
 @registerClass({
 	Properties: {
-		exclusions: GObject.ParamSpec.boxed('exclusions', null, null, GObject.ParamFlags.READWRITE, GLib.strv_get_type()),
+		exclusions: GObject.ParamSpec.boxed(
+			'exclusions',
+			null,
+			null,
+			GObject.ParamFlags.READWRITE,
+			GLib.strv_get_type(),
+		),
 	},
 })
 class AppExclusionsGroup extends Adw.PreferencesGroup {

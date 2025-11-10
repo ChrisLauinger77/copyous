@@ -65,7 +65,10 @@ class SoundVolumeRow extends Adw.PreferencesRow {
 		box.append(resetButton);
 
 		resetButton.connect('clicked', () => (this.slider.adjustment.value = 0));
-		this.slider.adjustment.connect('notify::value', () => (resetButton.sensitive = this.slider.adjustment.value !== 0));
+		this.slider.adjustment.connect(
+			'notify::value',
+			() => (resetButton.sensitive = this.slider.adjustment.value !== 0),
+		);
 	}
 }
 

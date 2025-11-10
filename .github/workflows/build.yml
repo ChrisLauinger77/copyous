@@ -11,18 +11,26 @@ env:
 
 jobs:
   lint:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: true
+
       - uses: ./.github/actions/setup
 
       - name: Lint
         run: make lint
 
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: true
+
       - uses: ./.github/actions/setup
         with:
           install-gnome-extensions-tool: 'true'
@@ -41,7 +49,7 @@ jobs:
 
   localization:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     permissions:
       contents: write

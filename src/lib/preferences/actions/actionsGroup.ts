@@ -534,7 +534,9 @@ export class ActionsGroup extends Adw.PreferencesGroup {
 
 		// Populate Actions and Submenus
 		const jsobjects = actions.map((a) => new JsObjectWrapper(a));
-		this._model = Gio.ListStore.new(JsObjectWrapper.$gtype) as Gio.ListStore<JsObjectWrapper<Action | ActionSubmenu>>;
+		this._model = Gio.ListStore.new(JsObjectWrapper.$gtype) as Gio.ListStore<
+			JsObjectWrapper<Action | ActionSubmenu>
+		>;
 		this._model.splice(0, 0, jsobjects);
 
 		this._listbox.bind_model(this._model, this.createRow.bind(this));

@@ -17,14 +17,26 @@ export class ItemCustomization extends Adw.PreferencesGroup {
 		const itemWidth = new Adw.SpinRow({
 			title: _('Item Width'),
 			subtitle: _('Change the width of the clipboard items'),
-			adjustment: new Gtk.Adjustment({ lower: 200, upper: 1000, step_increment: 1, page_increment: 5, value: 300 }),
+			adjustment: new Gtk.Adjustment({
+				lower: 200,
+				upper: 1000,
+				step_increment: 1,
+				page_increment: 5,
+				value: 300,
+			}),
 		});
 		this.add(itemWidth);
 
 		const itemHeight = new Adw.SpinRow({
 			title: _('Item Height'),
 			subtitle: _('Change the height of the clipboard items'),
-			adjustment: new Gtk.Adjustment({ lower: 50, upper: 1000, step_increment: 1, page_increment: 5, value: 200 }),
+			adjustment: new Gtk.Adjustment({
+				lower: 50,
+				upper: 1000,
+				step_increment: 1,
+				page_increment: 5,
+				value: 200,
+			}),
 		});
 		this.add(itemHeight);
 

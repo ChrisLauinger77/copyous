@@ -10,12 +10,16 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     permissions:
       contents: write
 
     steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: true
+
       - uses: ./.github/actions/setup
         with:
           install-gnome-extensions-tool: 'true'

@@ -94,8 +94,18 @@ export class NotificationManager extends GObject.Object {
 					const context = global.stage.context.get_backend().get_cogl_context();
 					const pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(body, 256, 256, true);
 					const pixels = pixbuf.get_pixels();
-					const content = new St.ImageContent({ preferred_width: pixbuf.width, preferred_height: pixbuf.height });
-					content.set_bytes(context, pixels, Cogl.PixelFormat.RGBA_8888, pixbuf.width, pixbuf.height, pixbuf.rowstride);
+					const content = new St.ImageContent({
+						preferred_width: pixbuf.width,
+						preferred_height: pixbuf.height,
+					});
+					content.set_bytes(
+						context,
+						pixels,
+						Cogl.PixelFormat.RGBA_8888,
+						pixbuf.width,
+						pixbuf.height,
+						pixbuf.rowstride,
+					);
 					gicon = content;
 				} catch {
 					gicon = Icon.Image.load(this._ext);
