@@ -280,11 +280,11 @@
 			.content-preview {
 				margin: 0;
 				border: none;
-				border-radius: $base_border_radius * 1.5 - 1px;
+				border-radius: $base_border_radius * 2 - 1px;
 
 				.image-box,
 				.color-box {
-					border-radius: $base_border_radius * 1.5 - 1px;
+					border-radius: $base_border_radius * 2 - 1px;
 				}
 			}
 		}
