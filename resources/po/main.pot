@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-15 22:37+0000\n"
+"POT-Creation-Date: 2026-03-16 00:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -200,7 +200,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: src/lib/ui/clipboardDialog.ts:129 src/lib/ui/clipboardDialog.ts:234
+#: src/lib/ui/clipboardDialog.ts:137 src/lib/ui/clipboardDialog.ts:242
 #: src/lib/ui/indicator.ts:52 src/lib/preferences/general/historySettings.ts:64
 msgid "Clear"
 msgstr ""
@@ -636,17 +636,29 @@ msgstr ""
 msgid "Activate Default Action"
 msgstr ""
 
-#: src/lib/preferences/shortcuts/dialogShortcuts.ts:14
+#: src/lib/preferences/shortcuts/dialogShortcuts.ts:16
 #: src/lib/preferences/customization/dialogCustomization.ts:24
 msgid "Dialog"
 msgstr ""
 
-#: src/lib/preferences/shortcuts/dialogShortcuts.ts:17
+#: src/lib/preferences/shortcuts/dialogShortcuts.ts:19
 msgid "Open Clipboard Dialog"
 msgstr ""
 
-#: src/lib/preferences/shortcuts/dialogShortcuts.ts:20
+#: src/lib/preferences/shortcuts/dialogShortcuts.ts:22
 msgid "Toggle Incognito Mode"
+msgstr ""
+
+#: src/lib/preferences/shortcuts/dialogShortcuts.ts:26
+msgid "Open Clipboard Dialog Behavior"
+msgstr ""
+
+#: src/lib/preferences/shortcuts/dialogShortcuts.ts:27
+msgid "Toggle Dialog"
+msgstr ""
+
+#: src/lib/preferences/shortcuts/dialogShortcuts.ts:27
+msgid "Open / Select Next Item"
 msgstr ""
 
 #: src/lib/preferences/shortcuts/navigationShortcuts.ts:12
