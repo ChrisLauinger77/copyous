@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 23:25+0000\n"
+"POT-Creation-Date: 2026-03-24 20:46+0000\n"
 "PO-Revision-Date: 2025-12-14 10:45+0100\n"
 "Last-Translator: Fabian Esposito <fabian.esposito@outlook.com>\n"
 "Language-Team: Italiano\n"
@@ -1342,6 +1342,7 @@ msgid "Choose between pre-defined profiles"
 msgstr "Scegli tra i profili predefiniti"
 
 #: src/lib/preferences/customization/profiles.ts:190
+#: src/lib/preferences/customization/themeCustomization.ts:75
 msgid "Default"
 msgstr "Predefinito"
 
@@ -1364,60 +1365,66 @@ msgid "Set the preferred theme"
 msgstr "Imposta il tema preferito"
 
 #: src/lib/preferences/customization/themeCustomization.ts:75
-msgid "System"
-msgstr "Sistema"
-
-#: src/lib/preferences/customization/themeCustomization.ts:75
-#: src/lib/preferences/customization/themeCustomization.ts:90
-msgid "Dark"
-msgstr "Scuro"
-
-#: src/lib/preferences/customization/themeCustomization.ts:75
-#: src/lib/preferences/customization/themeCustomization.ts:90
-msgid "Light"
-msgstr "Chiaro"
-
-#: src/lib/preferences/customization/themeCustomization.ts:75
-msgid "High Contrast"
+msgid "Yaru"
 msgstr ""
 
-#: src/lib/preferences/customization/themeCustomization.ts:88
+#: src/lib/preferences/customization/themeCustomization.ts:89
+#: src/lib/preferences/customization/themeCustomization.ts:96
 msgid "Color Scheme"
 msgstr "Schema di colori"
 
-#: src/lib/preferences/customization/themeCustomization.ts:89
-msgid "Set the color scheme of the custom theme"
-msgstr "Imposta lo schema di colori del tema personalizzato"
+#: src/lib/preferences/customization/themeCustomization.ts:90
+#: src/lib/preferences/customization/themeCustomization.ts:97
+msgid "Set the color scheme of the theme"
+msgstr ""
 
-#: src/lib/preferences/customization/themeCustomization.ts:96
+#: src/lib/preferences/customization/themeCustomization.ts:91
+msgid "System"
+msgstr "Sistema"
+
+#: src/lib/preferences/customization/themeCustomization.ts:91
+#: src/lib/preferences/customization/themeCustomization.ts:98
+msgid "Dark"
+msgstr "Scuro"
+
+#: src/lib/preferences/customization/themeCustomization.ts:91
+#: src/lib/preferences/customization/themeCustomization.ts:98
+msgid "Light"
+msgstr "Chiaro"
+
+#: src/lib/preferences/customization/themeCustomization.ts:91
+msgid "High Contrast"
+msgstr ""
+
+#: src/lib/preferences/customization/themeCustomization.ts:104
 msgid "Background Color"
 msgstr "Colore di sfondo"
 
-#: src/lib/preferences/customization/themeCustomization.ts:97
+#: src/lib/preferences/customization/themeCustomization.ts:105
 msgid "Set the background color of the clipboard dialog"
 msgstr "Imposta il colore di sfondo della finestra di dialogo degli appunti"
 
-#: src/lib/preferences/customization/themeCustomization.ts:103
+#: src/lib/preferences/customization/themeCustomization.ts:111
 msgid "Text Color"
 msgstr "Colore del testo"
 
-#: src/lib/preferences/customization/themeCustomization.ts:104
+#: src/lib/preferences/customization/themeCustomization.ts:112
 msgid "Set the text color of the clipboard dialog"
 msgstr "Imposta il colore del testo della finestra di dialogo degli appunti"
 
-#: src/lib/preferences/customization/themeCustomization.ts:110
+#: src/lib/preferences/customization/themeCustomization.ts:118
 msgid "Item Color"
 msgstr "Colore dell'elemento"
 
-#: src/lib/preferences/customization/themeCustomization.ts:111
+#: src/lib/preferences/customization/themeCustomization.ts:119
 msgid "Set the background color of clipboard items"
 msgstr "Imposta il colore di sfondo degli elementi degli appunti"
 
-#: src/lib/preferences/customization/themeCustomization.ts:117
+#: src/lib/preferences/customization/themeCustomization.ts:125
 msgid "Search Color"
 msgstr "Colore della ricerca"
 
-#: src/lib/preferences/customization/themeCustomization.ts:118
+#: src/lib/preferences/customization/themeCustomization.ts:126
 msgid "Set the background color of the search bar"
 msgstr "Imposta il colore di sfondo della barra di ricerca"
 
@@ -1882,6 +1889,9 @@ msgstr "Personalizzazione"
 #: src/prefs.ts:107
 msgid "Shortcuts"
 msgstr "Scorciatoie"
+
+#~ msgid "Set the color scheme of the custom theme"
+#~ msgstr "Imposta lo schema di colori del tema personalizzato"
 
 #~ msgid "Failed to load database"
 #~ msgstr "Impossibile caricare il database"
