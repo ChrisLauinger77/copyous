@@ -9,7 +9,7 @@ $tag_color_purple: #9c3cbe;
 $tag_color_slate: #6f8396;
 
 $card_insensitive_fg_color: if(
-	$variant == 'light',
-	mix($fg_color, $card_bg_color, 60%),
-	mix($fg_color, $card_bg_color, 50%)
-);
+	$contrast == 'high',
+	$fg_color,
+	if($variant == 'light', darken($insensitive_fg_color, 5%), lighten($insensitive_fg_color, 9%))
+) !default;
