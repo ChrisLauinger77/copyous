@@ -124,9 +124,8 @@ $$(DIST_DIR)/css/stylesheet-$(1)-$(2).css: \
 		resources/css/themes/$(1)/$(2).scss resources/css/themes/$(1)/gnome-shell-sass/_*.scss \
 		resources/css/themes/default/_*.scss resources/css/themes/default/widgets/_*.scss | $$(DIST_DIR)
 	@mkdir -p $$(DIST_DIR)/css
-	pnpm exec sass --no-source-map --load-path=resources/css/themes/default --load-path=resources/css/themes/$(1)/gnome-shell-sass --quiet-deps $$<:$$@
-	sed -i -re ':a; s%(.*)/\*.*\*/%\1%; ta; /\/\*/ !b; N; ba' $$@ # Remove multiline comments
-	sed -i -e '/stage {/,/}/d' -e '/^$$$$/d' $$@
+	pnpm exec sass --no-source-map --load-path=resources/css/themes/default --load-path=resources/css/themes/$(1)/gnome-shell-sass --style compressed --quiet-deps $$<:$$@
+	sed -i 's/stage\s*{[^}]*}//g' $$@
 endef
 
 THEME_SCSS := $(filter-out $(wildcard resources/css/themes/*/_*.scss),$(wildcard resources/css/themes/*/*.scss))
@@ -138,7 +137,7 @@ $(DIST_DIR)/css/template-%.css: \
 		resources/css/template.scss scripts/template/postcss.config.cjs \
 		resources/css/themes/default/_*.scss resources/css/themes/default/widgets | $(DIST_DIR)
 	@mkdir -p $(DIST_DIR)/css
-	VARIANT=$* pnpm exec postcss $< --config scripts/template | pnpm exec sass --no-source-map --stdin $@
+	VARIANT=$* pnpm exec postcss $< --config scripts/template | pnpm exec sass --no-source-map --stdin --style compressed $@
 
 CSS := $(THEME_CSS) $(DIST_DIR)/css/template-dark.css $(DIST_DIR)/css/template-light.css
 
